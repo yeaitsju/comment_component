@@ -10,32 +10,7 @@ class Comment extends HTMLElement {
  //overiding the connected call back method with my own HTML code
   connectedCallback() {
     this.innerHTML = `
-    <style>
-    .comment {
-        border: solid gray 1px;
-        padding: 15px;
-        margin: 20px;
-        
-        background-color: rgb(207, 205, 203);
-      }
-      
-      .email {
-        color: red;
-      }
-      h2 {
-        margin-bottom: 10px;
-      }
-      .rcorners1 {
-        border-radius: 25px;
-        background: #73AD21;
-        padding: 20px;
-        width: 200px;
-        height: 150px;
-        margin-left: 35vw;
-        margin-right: 35vw;
-      }
-      
-    </style>
+   
     <section class="comment rcorners1">
         <h2>
         <img src="comment-26.png" />

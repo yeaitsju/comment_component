@@ -2,5 +2,7 @@
 import './style.css'
 
 document.querySelector('#app').innerHTML = `
-  <h1>New Comment Component</h1>
+  <h1>Customer Review</h1>
+  
 `
+

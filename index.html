@@ -8,7 +8,73 @@
   </head>
   <body>
     <div id="app"></div>
+    
 
+    <!-- put form here -->
+    <form method="POST">
+      <!-- Full Name -->
+      <div class="row">
+        <label class="desc" for="full_name">*Full Name</label>
+        <br />
+        <input
+          id="full_name"
+          name="full_name"
+          type="text"
+          placeholder="John Doe"
+          size="50"
+          tabindex="1"
+          required
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="row">
+        <label class="desc" for="my_email"> *Email </label>
+        <div>
+          <input
+            id="my_email"
+            name="my_email"
+            type="email"
+            spellcheck="false"
+            placeholder="janedoe@gmail.com"
+            maxlength="255"
+            tabindex="2"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- Large Text Area -->
+      <div class="row">
+        <label for="message"> *Comment (required) </label>
+
+        <div>
+          <textarea
+            id="message"
+            name="message"
+            spellcheck="true"
+            rows="10"
+            cols="50"
+            tabindex="4"
+            required
+          ></textarea>
+        </div>
+      </div>
+
+      <!-- checkbox -->
+      <div class="row">
+        <input
+          type="checkbox"
+          id="option1"
+          name="option1"
+          value="Do you agree"
+          required
+        />
+        <label for="option1"> Agree for comment to go public?</label><br />
+      </div>
+
+      <button type="submit" href="/">Send Feedback</button>
+    </form>
     <custom-comment
       name="Julius"
       email="juliusatkinson@gmail.com"
@@ -16,7 +82,7 @@
     ></custom-comment>
     <custom-comment
       name="Chastity"
-      email="Chastityapowell@gmail.com"
+      email="Chastitypowell@gmail.com"
       comment="I'm so glad you did."
     ></custom-comment>
     <custom-comment
@@ -29,5 +95,7 @@
        .js which controls what the cutstom tag does -->
     <script type="module" src="/comment.js"></script>
     <script type="module" src="/main.js"></script>
+    <img src="move_to_miami.jpg">
+    
   </body>
 </html>
