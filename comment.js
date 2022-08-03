@@ -10,7 +10,8 @@ class Comment extends HTMLElement {
  //overiding the connected call back method with my own HTML code
   
  connectedCallback() {
-   console.log (this.getAttribute("timestamp"))
+  //  console.log (this.getAttribute("timestamp"))
+  //ShadowDom encapsulates the rule created so they don't leak out or impact other parts of the system
     const shadow = this.attachShadow({mode: "open"});
     shadow.innerHTML = `<section class="comment">
    
@@ -27,6 +28,9 @@ class Comment extends HTMLElement {
         <p>
         ${this.getAttribute("timestamp")}
         </p>
+        <br>
+        ${this.getAttribute("timeonly")}
+        </br>
       </section>
       <style>
       .comment {
@@ -44,7 +48,7 @@ class Comment extends HTMLElement {
         background: #def6bc;
         padding: 20px;
         width: 300px;
-        height: 150px;
+        height: 200px;
         margin-left: 35vw;
         margin-right: 35vw;
       }

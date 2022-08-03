@@ -22,16 +22,19 @@ const addComment = (ev) => {
   const currentMonth = currentDate.getMonth();
   const currentYear = currentDate.getFullYear();
   const currentDayOfMonth = currentDate.getDate();
-  const time = currentDate.toLocaleTimeString();
+  // const time = currentDate.toLocaleTimeString();
+  const time = currentDate.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit'});
   const dateString =
-    currentMonth + 1 + "-" + currentDayOfMonth + "-" + currentYear + "-" + time;
-
+    // currentMonth + 1 + "-" + currentDayOfMonth + "-" + currentYear + "-" + time;
+    currentMonth + 1 + "-" + currentDayOfMonth + "-" + currentYear;
+    console.log(time);
   const template = `
   <custom-comment
   name="${name}"
   email="${email}"
   comment="${comment}"
-  timestamp="${dateString}">
+  timestamp="${dateString}"
+  timeonly="${time}">
   </custom-comment>`;
   document
     .querySelector("#comments")
