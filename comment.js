@@ -8,8 +8,11 @@ class Comment extends HTMLElement {
   }
   //this method is incharge of bulding the HTML for the component
  //overiding the connected call back method with my own HTML code
-  connectedCallback() {
-    this.innerHTML = `
+  
+ connectedCallback() {
+   console.log (this.getAttribute("timestamp"))
+    const shadow = this.attachShadow({mode: "open"});
+    shadow.innerHTML = `<section class="comment">
    
     <section class="comment rcorners1">
         <h2>
@@ -18,8 +21,45 @@ class Comment extends HTMLElement {
     
         </h2>
         <p class="email">${this.getAttribute("email")}</p>
+        <p>
         ${this.getAttribute("comment")}
-      </section>`;
+        </p>
+        <p>
+        ${this.getAttribute("timestamp")}
+        </p>
+      </section>
+      <style>
+      .comment {
+        border: solid gray 1px;
+        padding: 15px;
+        margin: 20px;
+        
+        background-color: rgb(207, 205, 203);
+      }
+      .email {
+        color: red;
+      }
+      .rcorners1 {
+        border-radius: 25px;
+        background: #def6bc;
+        padding: 20px;
+        width: 300px;
+        height: 150px;
+        margin-left: 35vw;
+        margin-right: 35vw;
+      }
+      #comments {
+        border: solid rgb(66, 65, 65) 20px;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        border-radius: 20px;
+      }
+      h2 {
+        margin-bottom: 10px;
+      }
+      </style>
+      `;
   }
 }
 //customelements.define is taking two arguments. first aergument is what i want the name of the tag to be. 2nd argument is the class that i want to use to controll that tag. which is the comment

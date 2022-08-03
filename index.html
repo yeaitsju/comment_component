@@ -8,9 +8,10 @@
   </head>
   <body>
     <div id="app"></div>
-    
 
-    <!-- put form here -->
+    <section id="miamipic">
+      <img src="move_to_miami.jpg" class="miami" />
+    </section>
     <form method="POST">
       <!-- Full Name -->
       <div class="row">
@@ -75,27 +76,30 @@
 
       <button type="submit" href="/">Send Feedback</button>
     </form>
-    <custom-comment
-      name="Julius"
-      email="juliusatkinson@gmail.com"
-      comment="Hello I figured it out!"
-    ></custom-comment>
-    <custom-comment
-      name="Chastity"
-      email="Chastitypowell@gmail.com"
-      comment="I'm so glad you did."
-    ></custom-comment>
-    <custom-comment
-      name="Kayla"
-      email="kayla@gmail.com"
-      comment="Me too, I got it now!"
-    ></custom-comment>
+    <section id="comments">
+      <custom-comment
+        name="Julius"
+        email="juliusatkinson@gmail.com"
+        comment="Hello I figured it out!"
+        timestamp="1-08-2020"
+      ></custom-comment>
+      <custom-comment
+        name="Chastity"
+        email="Chastitypowell@gmail.com"
+        comment="I'm so glad you did."
+        timestamp="1-08-2020"
+      ></custom-comment>
+      <custom-comment
+        name="Kayla"
+        email="kayla@gmail.com"
+        comment="Me too, I got it now!"
+        timestamp="1-08-2020"
+      ></custom-comment>
+    </section>
 
     <!-- links custom comment to comment
        .js which controls what the cutstom tag does -->
     <script type="module" src="/comment.js"></script>
     <script type="module" src="/main.js"></script>
-    <img src="move_to_miami.jpg">
-    
   </body>
 </html>
