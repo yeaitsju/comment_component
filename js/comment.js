@@ -28,8 +28,7 @@ export default class Comment extends HTMLElement {
         <p>
         ${this.getAttribute("timestamp")}
         </p>
-        <br>
-        ${this.getAttribute("timeonly")}
+        
         </br>
       </section>
       <style>
