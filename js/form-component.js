@@ -119,6 +119,8 @@ export default class Form {
             // document.querySelector('#option1').checked = false
         }
         console.log(commentObject);
+        // console.log(full_name);
+        // console.log(my_email);
 
 
         // tell the state manager that we have
