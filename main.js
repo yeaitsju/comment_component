@@ -23,11 +23,14 @@ const addComment = (ev) => {
   const currentYear = currentDate.getFullYear();
   const currentDayOfMonth = currentDate.getDate();
   // const time = currentDate.toLocaleTimeString();
-  const time = currentDate.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit'});
+  const time = currentDate.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
   const dateString =
     // currentMonth + 1 + "-" + currentDayOfMonth + "-" + currentYear + "-" + time;
     currentMonth + 1 + "-" + currentDayOfMonth + "-" + currentYear;
-    console.log(time);
+  console.log(time);
   const template = `
   <custom-comment
   name="${name}"
@@ -39,6 +42,13 @@ const addComment = (ev) => {
   document
     .querySelector("#comments")
     .insertAdjacentHTML("afterbegin", template);
+  document.querySelector("#full_name").value = "";
+  document.querySelector("#my_email").value = "";
+  document.querySelector("#message").value = "";
+  document.querySelector("#option1").checked = false;
+  //grab what user typed and set it to empty
 };
+
+//
 //listens for a form submission and when a user clicks on it, it executes the search function
 document.querySelector("form").addEventListener("submit", addComment);
