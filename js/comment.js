@@ -2,7 +2,7 @@
 // includes what attributes it needs which is the name email and comment
 //and how i want to present those comment ising HTML
 // also includes style tag aka style rules
-class Comment extends HTMLElement {
+export default class Comment extends HTMLElement {
   constructor() {
     super();
   }
