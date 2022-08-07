@@ -27,13 +27,13 @@ export default class CommentList {
       // creating an HTML representation of it
       let template = `
             <custom-comment 
-            let name = comments[i].name;
-            let email = comments[i].email;
-            let comment = comments[i].comment;
-            let timestamp = comments[i].timestamp;
+             name = "${comments[i].name}"
+             email = "${comments[i].email}"
+             comment = "${comments[i].comment}"
+             timestamp = "${comments[i].timestamp}"
              </custom-comment>
             `;
-
+        console.log(template);
       // we need to append it to the DOM
       document
         .querySelector(".comments")
@@ -41,3 +41,7 @@ export default class CommentList {
     }
   }
 }
+// document.querySelector('#full_name').value = "" 
+// document.querySelector('#my_email').value = ""
+// document.querySelector('#message').value = ""
+// document.querySelector('#option1').checked = false

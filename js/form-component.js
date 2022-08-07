@@ -129,10 +129,10 @@ export default class Form {
 
 
         // Your Job: how do you clear out your form!!
-                document.querySelector('#full_name').value = "" 
-                document.querySelector('#my_email').value = ""
-                document.querySelector('#message').value = ""
-                document.querySelector('#option1').checked = false
+        document.querySelector('#full_name').value = "" 
+            document.querySelector('#my_email').value = ""
+            document.querySelector('#message').value = ""
+            document.querySelector('#option1').checked = false
 
     }
 

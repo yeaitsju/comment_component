@@ -20,19 +20,19 @@ export default class StateManager {
             {
                 name: "Julius",
                 email: "julius@gmail.com",
-                comment: "Here is my comment!",
+                comment: "Hello, I got it!",
                 timestamp: "7/29/2022 3:15:13PM"
             },
             {
-                name: "Adwaina",
-                email: "adwaina@gmail.com",
-                comment: "text text text text text text text text text text ",
+                name: "George",
+                email: "hello@gmail.com",
+                comment: "Thats awesome, I'm so happy.",
                 timestamp: "8/3/2022 3:15:13PM"
             },
             {
-                name: "Monique",
-                email: "mo@gmail.com",
-                comment: "text text text text text text text text text text ",
+                name: "Christopher",
+                email: "chris@gmail.com",
+                comment: "I got it also.",
                 timestamp: "8/4/2022 3:15:13PM"
             }
         ]
