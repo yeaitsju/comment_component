@@ -20,29 +20,54 @@ export default class StateManager {
             {
                 name: "Julius",
                 email: "julius@gmail.com",
-                comment: "Hello, I figured it out!",
+                comment: "Here is my comment!",
                 timestamp: "7/29/2022 3:15:13PM"
             },
             {
-                name: "Chastity",
-                email: "chastity@gmail.com",
-                comment: "Im so glad that you did! ",
+                name: "Adwaina",
+                email: "adwaina@gmail.com",
+                comment: "text text text text text text text text text text ",
                 timestamp: "8/3/2022 3:15:13PM"
             },
             {
-                name: "Darlene",
-                email: "darlene@gmail.com",
-                comment: "Thats great, I'm getting it also",
+                name: "Monique",
+                email: "mo@gmail.com",
+                comment: "text text text text text text text text text text ",
                 timestamp: "8/4/2022 3:15:13PM"
             }
         ]
+        // mailing list
+        this.subscribers = [];
     }
 
-    // 2. we need a way to update the comments list
+         // 2. we need a way to update the comments list
     addComment(newComment){
+        // "push" method of an array appends an item to the bottom
         this.comments.push(newComment);
         console.log(this.comments);
+        
+        //I need to notify everyone that a 'comments-updated' event has just happened
+        //Q:; WHo do i notify?
+        //A: My subscribers!!! (which are stored in this.subscribers (an array}))
+        //Q: How do I notify them?
+        //A: I trigger the function they told me to trigger.
+        for(let i = 0; i < this.subscribers.length; i++) {
+            const subscriber = this.subscribers[i];
+            const eventName = subscriber[0];
+            const f = subscriber[1];
+            if (eventName === 'comment-added') {
+                console.log('notifying my subscriber');
+                f(this.comments);
+            }
+        }
+
+       
     }
 
     // 3. we need a way to tell the other components to redraw
+    subscribe(theEvent, theResponse) {
+        this.subscribers.push([
+            theEvent, theResponse
+        ])
+    }
 }

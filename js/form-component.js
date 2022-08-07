@@ -113,9 +113,9 @@ export default class Form {
             email: document.querySelector('#my_email').value,
             comment: document.querySelector('#message').value, 
             timestamp: dateString
-            // document.querySelector('#full_name').value, 
-            // document.querySelector('#my_email').value,
-            // document.querySelector('#message').value,
+            // document.querySelector('#full_name').value = "" 
+            // document.querySelector('#my_email').value = ""
+            // document.querySelector('#message').value = ""
             // document.querySelector('#option1').checked = false
         }
         console.log(commentObject);
@@ -129,6 +129,10 @@ export default class Form {
 
 
         // Your Job: how do you clear out your form!!
+                document.querySelector('#full_name').value = "" 
+                document.querySelector('#my_email').value = ""
+                document.querySelector('#message').value = ""
+                document.querySelector('#option1').checked = false
 
     }
 

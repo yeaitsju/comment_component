@@ -10,7 +10,6 @@ export default class Comment extends HTMLElement {
  //overiding the connected call back method with my own HTML code
   
  connectedCallback() {
-  //  console.log (this.getAttribute("timestamp"))
   //ShadowDom encapsulates the rule created so they don't leak out or impact other parts of the system
     const shadow = this.attachShadow({mode: "open"});
     shadow.innerHTML = `<section class="comment">
