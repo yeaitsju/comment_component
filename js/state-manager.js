@@ -41,6 +41,7 @@ export default class StateManager {
     }
 
          // 2. we need a way to update the comments list
+         //the form invoked the statemanagers add comment function
     addComment(newComment){
         // "push" method of an array appends an item to the bottom
         this.comments.push(newComment);
@@ -66,6 +67,9 @@ export default class StateManager {
 
     // 3. we need a way to tell the other components to redraw
     subscribe(theEvent, theResponse) {
+        //this code adds a list of two elements to the subscribers array
+        //the first element is a string that indicates which event that the subscribers are looking for
+        //the second element is a function that will get invoked when the event happens
         this.subscribers.push([
             theEvent, theResponse
         ])

@@ -30,7 +30,7 @@ export default class CommentList {
              name = "${comments[i].name}"
              email = "${comments[i].email}"
              comment = "${comments[i].comment}"
-             timestamp = "${comments[i].timestamp}"
+             timestamp = "${comments[i].timestamp}">
              </custom-comment>
             `;
         console.log(template);
