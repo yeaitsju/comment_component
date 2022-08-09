@@ -10,8 +10,9 @@ export default class CommentList {
     // when the comment list is first cretaed the comment list tells the state manager that when the "comment updated" event happens, it should invoke the "comments-updated"
     // then the comment list is going to subscribe to the "comment added" event.
     stateManager.subscribe('comment-added', this.redraw.bind(this));
+    stateManager.subscribe('comments-loaded', this.redraw.bind(this));
 
-    this.redraw(stateManager.comments);
+    // this.redraw(stateManager.comments);
   }
 
   redraw(comments) {
