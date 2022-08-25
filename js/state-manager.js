@@ -85,6 +85,7 @@ export default class StateManager {
       // call this function to create a new comment:
 
       var transaction = db.transaction(["comments"], "readwrite");
+      console.log(transaction);
       var comments = transaction.objectStore("comments");
       newComment.id = Math.floor(Math.random() * 100000000);
       console.log(newComment);

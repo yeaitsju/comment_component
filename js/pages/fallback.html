@@ -27,10 +27,14 @@
                 the form right here
             -->
         </section>
-
+     <div class="container grey-text center"></div>
       <section class="comments"> </section>
+      <h5>OOPS!</h5>
+      <p>Currently you cannot view this page offline</p>
+      <a href="/" class="btn-small orange">/a>Go to Homepage</a>
+    </div>
     
-    
+   
       
 
 
@@ -44,17 +48,3 @@
     <script src="/js/database-tests.js"></script>
   </body>
 </html>
-
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log(`Service Worker registered! Scope: ${registration.scope}`);
-        })
-        .catch(err => {
-          console.log(`Service Worker registration failed: ${err}`);
-        });
-    });
-  }
-</script>

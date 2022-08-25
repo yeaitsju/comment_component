@@ -9,5 +9,12 @@
   },
   "devDependencies": {
     "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "idb": "^7.0.2",
+    "vite-plugin-pwa": "^0.12.3",
+    "workbox-cli": "^6.5.4",
+    "workbox-precaching": "^6.5.4"
   }
 }
