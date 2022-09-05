@@ -18,7 +18,6 @@ export default defineConfig({
   build: {
     outDir: "../dist",
   },
-  base: "/",
 });
 
 // import { VitePWA } from 'vite-plugin-pwa'
