@@ -17,14 +17,12 @@ Form component:
 
 */
 
-
 export default class Form {
-
-    // what is a constructor?
-    // brings the instance to life
-    constructor(sm) {
-        this.stateManager = sm;
-        const formTemplate = `
+  // what is a constructor?
+  // brings the instance to life
+  constructor(sm) {
+    this.stateManager = sm;
+    const formTemplate = `
        
    
     <form method="POST">
@@ -94,46 +92,44 @@ export default class Form {
    
         `;
 
-        document.querySelector('.form-container').innerHTML = formTemplate;
+    document.querySelector(".form-container").innerHTML = formTemplate;
 
-        document.querySelector('form').addEventListener('submit', this.addComment.bind(this));
-    }
+    document
+      .querySelector("form")
+      .addEventListener("submit", this.addComment.bind(this));
+  }
 
-    addComment (ev) {
-        // goal of add comment is to let the state manager know
-        // that a new comment has been added:
-        ev.preventDefault();
+  addComment(ev) {
+    // goal of add comment is to let the state manager know
+    // that a new comment has been added:
+    ev.preventDefault();
 
-        const date = new Date();
-        let dateString = date.toLocaleDateString();
-        dateString += " " + date.toLocaleTimeString();
+    const date = new Date();
+    let dateString = date.toLocaleDateString();
+    dateString += " " + date.toLocaleTimeString();
 
-        const commentObject = {
-            name: document.querySelector('#full_name').value,
-            email: document.querySelector('#my_email').value,
-            comment: document.querySelector('#message').value, 
-            timestamp: dateString
-            // document.querySelector('#full_name').value = "" 
-            // document.querySelector('#my_email').value = ""
-            // document.querySelector('#message').value = ""
-            // document.querySelector('#option1').checked = false
-        }
-        console.log(commentObject);
-        // console.log(full_name);
-        // console.log(my_email);
+    const commentObject = {
+      name: document.querySelector("#full_name").value,
+      email: document.querySelector("#my_email").value,
+      comment: document.querySelector("#message").value,
+      timestamp: dateString,
+      // document.querySelector('#full_name').value = ""
+      // document.querySelector('#my_email').value = ""
+      // document.querySelector('#message').value = ""
+      // document.querySelector('#option1').checked = false
+    };
+    console.log(commentObject);
+    // console.log(full_name);
+    // console.log(my_email);
 
+    // tell the state manager that we have
+    // a new comment to add:
+    this.stateManager.addComment(commentObject);
 
-        // tell the state manager that we have
-        // a new comment to add:
-        this.stateManager.addComment(commentObject);
-
-
-        // Your Job: how do you clear out your form!!
-        document.querySelector('#full_name').value = "" 
-            document.querySelector('#my_email').value = ""
-            document.querySelector('#message').value = ""
-            document.querySelector('#option1').checked = false
-
-    }
-
+    // Your Job: how do you clear out your form!!
+    document.querySelector("#full_name").value = "";
+    document.querySelector("#my_email").value = "";
+    document.querySelector("#message").value = "";
+    document.querySelector("#option1").checked = false;
+  }
 }

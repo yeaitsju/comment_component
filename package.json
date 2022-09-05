@@ -6,10 +6,12 @@
     "dev": "vite serve src",
     "build": "vite build src",
     "preview": "vite preview",
-    "postbuild": "mv src/dist dist"
+    "test": "prettier -c .",
+    "fix": "prettier --write ."
   },
   "devDependencies": {
     "vite": "^2.9.9",
-    "vite-plugin-pwa": "^0.12.3"
+    "vite-plugin-pwa": "^0.12.3",
+    "prettier": "^2.7.1"
   }
 }

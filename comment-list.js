@@ -6,21 +6,21 @@ The job of the comment list is to:
 */
 
 export default class CommentList {
-    constructor(comments) {
-        // when a new instance of CommentList is created,
-        // it needs to know what comments it should draw.
-        // it should draw those comments.
-        console.log(comments);
+  constructor(comments) {
+    // when a new instance of CommentList is created,
+    // it needs to know what comments it should draw.
+    // it should draw those comments.
+    console.log(comments);
 
-        for (let i = 0; i < comments.length; i++) {
-            // Julius first:
-            let name = comments[i].name;
-            let email = comments[i].email;
-            let comment = comments[i].comment;
-            let timestamp = comments[i].timestamp;
+    for (let i = 0; i < comments.length; i++) {
+      // Julius first:
+      let name = comments[i].name;
+      let email = comments[i].email;
+      let comment = comments[i].comment;
+      let timestamp = comments[i].timestamp;
 
-            // creating an HTML representation of it
-            let template = `
+      // creating an HTML representation of it
+      let template = `
                 <user-comment 
                     name="${name}" 
                     email="${email}" 
@@ -29,12 +29,10 @@ export default class CommentList {
                 </user-comment>
             `;
 
-            // we need to append it to the DOM
-            document.querySelector('.comments').insertAdjacentHTML(
-                'afterbegin', template
-            );
-        }
-
-        
+      // we need to append it to the DOM
+      document
+        .querySelector(".comments")
+        .insertAdjacentHTML("afterbegin", template);
     }
+  }
 }

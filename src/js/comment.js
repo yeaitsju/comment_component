@@ -7,11 +7,11 @@ export default class Comment extends HTMLElement {
     super();
   }
   //this method is incharge of bulding the HTML for the component
- //overiding the connected call back method with my own HTML code
-  
- connectedCallback() {
-  //ShadowDom encapsulates the rule created so they don't leak out or impact other parts of the system
-    const shadow = this.attachShadow({mode: "open"});
+  //overiding the connected call back method with my own HTML code
+
+  connectedCallback() {
+    //ShadowDom encapsulates the rule created so they don't leak out or impact other parts of the system
+    const shadow = this.attachShadow({ mode: "open" });
     shadow.innerHTML = `<section class="comment">
    
     <section class="comment rcorners1">

@@ -2,13 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
     <link rel="icon" type="image/svg+xml" href="favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comment Component</title>
   </head>
   <body>
-    
     <header>
       <h1>
         <!-- <img class="icon" src="favicon.jpg" /> -->
@@ -21,35 +23,33 @@
       <section id="miamipic">
         <img src="move_to_miami.jpg" class="miami" />
       </section>
-        <section class="form-container">
-            <!-- 
+      <section class="form-container">
+        <!-- 
                 the form component is going to inject 
                 the form right here
             -->
-        </section>
+      </section>
 
-      <section class="comments"> </section>
-    
-    
-      
-
-      
+      <section class="comments"></section>
     </main>
-      
+
     <script type="module" src="/js/comment.js"></script>
     <script type="module" src="/js/main.js"></script>
 
     <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-              console.log(`Service Worker registered! Scope: ${registration.scope}`);
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log(
+                `Service Worker registered! Scope: ${registration.scope}`
+              );
             })
-            .catch(err => {
+            .catch((err) => {
               console.log(`Service Worker registration failed: ${err}`);
             });
-        });
+        });
       }
     </script>
   </body>

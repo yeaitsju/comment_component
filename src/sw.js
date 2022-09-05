@@ -14,27 +14,22 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-
-
 import {
   pageCache,
   imageCache,
   staticResourceCache,
   googleFontsCache,
   offlineFallback,
-} from 'workbox-recipes';
+} from "workbox-recipes";
 
-
-
-
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js');
+importScripts(
+  "https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js"
+);
 
 if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
 
-  workbox.precaching.precacheAndRoute([
-    '**/*.html'
-  ]);
+  workbox.precaching.precacheAndRoute(["**/*.html"]);
 
   pageCache();
 
@@ -46,7 +41,6 @@ if (workbox) {
 
   offlineFallback();
 
-  
   // workbox.routing.registerRoute(
   //   /(.*)articles(.*)\.(?:png|gif|jpg)/,
   //   workbox.strategies.cacheFirst({
@@ -100,7 +94,6 @@ if (workbox) {
   //     return caches.match('pages/offline.html');
   //   });
   // });
-
 } else {
   console.log(`Boo! Workbox didn't load 😬`);
 }
